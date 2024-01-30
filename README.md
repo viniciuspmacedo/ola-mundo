@@ -13,3 +13,22 @@ Este projeto foi desenvolvido durante o curso: [React: desenvolvendo em React Ro
     Aqui aprendi a como diferenciar o comportamento de uma página comum de uma SPA (*Single Page Application*), sendo que a primeira é composta por várias páginas HTML e para navegar entre elas o navegador faz requisições ao servidor, já as SPA são construidas com apenas uma HTML e seu conteúdo é alterado dinamicamente pelo JavaScript.
     Também foi falado sobre a utilização do componente ```<Link>``` e a utilização em conjunto com o Hook ***useLocation*** para obter informações da rota atual.
     Por fim, mediante desafio, substituímos o componente ```<Link>``` pelo ```<NavLink>``` que "sabe" quando o link está "ativo", "pendente" ou "em transição".
+
+* ### Aula 3
+    Nesta aula foi aprendido sobre rotas aninhadas.
+    Quando vamos usar uma estrutura fixa que se repete em mais de uma página, como é o caso do nosso banner, podemos aninhar rotas, colocando o layout que será repetido na 'rota pai' e os demais elementos a serem renderizados na rota filha.
+    ```
+    <Route path="/" element={<DefaultPage />}>
+        <Route index element={<Start />} />
+        <Route path="sobre-mim" element={<AboutMe />} />
+    </Route>
+    ```
+
+    No caso acima, quando for renderizado a página sobre mim o navegador receberá o seguinte código:
+
+    ```
+    <DefaultPage>
+        <AboutMe />
+    </DefaultPage>
+    ```
+    Também foi usado a 'rota index', que simplifica a escrita e leitura dos caminhos da página. Neste caso o ```element = {<Start \>}``` será renderizado na rota "/".
