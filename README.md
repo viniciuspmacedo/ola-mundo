@@ -32,3 +32,13 @@ Este projeto foi desenvolvido durante o curso: [React: desenvolvendo em React Ro
     </DefaultPage>
     ```
     Também foi usado a 'rota index', que simplifica a escrita e leitura dos caminhos da página. Neste caso o ```element = {<Start \>}``` será renderizado na rota "/".
+
+* ### Aula 4
+    Utilização de rotas dinâmicas para utilizar uma mesma estrutura de página para conteúdos diferentes de acordo com alguma informação que é passada pela URL.
+    Essa informação é recebida no código através do Hook *useParams* que lê os seletores de rota dinâmica que passamos na URL.
+    
+    ```<Route path= "caminho/:nomedoparametro">``` 
+
+* ### Aula 5
+    Finalizando o curso aprendendo sobre a utilização do hook *useNavigate*, que pode receber tanto uma string direcionando para um determinado *path* como um inteiro (-1 nos leva para a página anterior na pilha de navegação).
+    Também foi falado sobre a utilização de rotas decendentes.
